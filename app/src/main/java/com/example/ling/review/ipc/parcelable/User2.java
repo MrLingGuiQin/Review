@@ -11,7 +11,6 @@ import android.os.Parcelable;
  * ***************************************
  */
 public class User2 implements Parcelable {
-
     public String name;
     public int id;
 

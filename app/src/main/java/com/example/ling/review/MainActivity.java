@@ -7,6 +7,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ling.review.asynctask.AsyncTaskActivity;
+import com.example.ling.review.handler.HandlerActivity;
+import com.example.ling.review.handler.HandlerActivity2;
+import com.example.ling.review.handlerthread.HandlerThreadActivity;
 import com.example.ling.review.ipc.aidl.Aidl2Activity;
 import com.example.ling.review.ipc.aidl.AidlActivity;
 import com.example.ling.review.ipc.parcelable.ParcelableActivity;
@@ -16,7 +20,7 @@ import com.example.ling.review.service.BindServiceActivity;
 import com.example.ling.review.service.StartServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private final String TAG = "AActivity";
+    private final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,5 +103,21 @@ public class MainActivity extends AppCompatActivity {
     // 测试AIDL返回自定义person类型
     public void onClickAidl2(View view) {
         startActivity(new Intent(this, Aidl2Activity.class));
+    }
+
+    public void onClickHandler(View view) {
+        startActivity(new Intent(this, HandlerActivity.class));
+    }
+
+    public void onClickHandler2(View view) {
+        startActivity(new Intent(this, HandlerActivity2.class));
+    }
+
+    public void onClickAsyncTask(View view) {
+        startActivity(new Intent(this, AsyncTaskActivity.class));
+    }
+
+    public void onClickHandlerThread(View view) {
+        startActivity(new Intent(this, HandlerThreadActivity.class));
     }
 }

@@ -37,6 +37,10 @@
         <activity android:name=".ipc.parcelable.ParcelableActivity" />
         <activity android:name=".ipc.aidl.AidlActivity" />
         <activity android:name=".ipc.aidl.Aidl2Activity" />
+        <activity android:name=".handler.HandlerActivity" />
+        <activity android:name=".handler.HandlerActivity2" />
+        <activity android:name=".asynctask.AsyncTaskActivity" />
+        <activity android:name=".handlerthread.HandlerThreadActivity"></activity>
     </application>
 
 </manifest>

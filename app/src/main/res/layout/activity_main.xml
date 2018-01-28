@@ -54,4 +54,38 @@
         android:text="AIDL传输自定义数据"
         android:textAllCaps="false"
         />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickHandler"
+        android:text="主线程使用Handler"
+        android:textAllCaps="false"
+        />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickHandler2"
+        android:text="子线程使用Handler"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAsyncTask"
+        android:text="AsyncTask"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickHandlerThread"
+        android:text="HandlerThread"
+        android:textAllCaps="false"
+        />
 </LinearLayout>
