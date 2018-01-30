@@ -3,14 +3,16 @@ package com.example.ling.review;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
+import com.example.ling.bean.ActivityBean;
 import com.example.ling.review.asynctask.AsyncTaskActivity;
 import com.example.ling.review.handler.HandlerActivity;
 import com.example.ling.review.handler.HandlerActivity2;
 import com.example.ling.review.handlerthread.HandlerThreadActivity;
+import com.example.ling.review.intentservice.IntentServiceActivity;
 import com.example.ling.review.ipc.aidl.Aidl2Activity;
 import com.example.ling.review.ipc.aidl.AidlActivity;
 import com.example.ling.review.ipc.parcelable.ParcelableActivity;
@@ -19,105 +21,41 @@ import com.example.ling.review.receiver.BroadcastReceiverActivity;
 import com.example.ling.review.service.BindServiceActivity;
 import com.example.ling.review.service.StartServiceActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private final String TAG = "MainActivity";
+    private List<ActivityBean> mList = new ArrayList();
+    private RecyclerView mRecyclerView;
+    private MainAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.e(TAG, "onCreate()");
         setContentView(R.layout.activity_main);
+        initData();
+        mRecyclerView = findViewById(R.id.rcy_main);
+        mAdapter = new MainAdapter(mList);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mAdapter);
     }
 
+    public void initData() {
+        mList.add(new ActivityBean("StartService", new Intent(this, StartServiceActivity.class)));
+        mList.add(new ActivityBean("BindService", new Intent(this, BindServiceActivity.class)));
+        mList.add(new ActivityBean("BroadcastReceiver", new Intent(this, BroadcastReceiverActivity.class)));
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.e(TAG, "onStart()");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.e(TAG, "onRestoreInstanceState()");
-        String msg = savedInstanceState.getString("msg");
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.e(TAG, "onResume()");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.e(TAG, "onPause()");
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        Log.e(TAG, "onSaveInstanceState()");
-        outState.putString("msg", "我要销毁重新创建啦");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.e(TAG, "onStop()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.e(TAG, "onDestroy()");
-    }
-
-    public void onClickStartService(View view) {
-        startActivity(new Intent(this, StartServiceActivity.class));
-    }
-
-    public void onClickBindService(View view) {
-        startActivity(new Intent(this, BindServiceActivity.class));
-    }
-
-    public void onClickBroadcastReceiver(View view) {
-        startActivity(new Intent(this, BroadcastReceiverActivity.class));
-    }
-
-    // 测试Parcelable序列化方式传递对象
-    public void onClickParcelable(View view) {
-        final User3 user3 = new User3("ling", 22);
         final Intent intent = new Intent(this, ParcelableActivity.class);
-        intent.putExtra("user", user3);
-        startActivity(intent);
-    }
-
-    // 测试AIDL返回int
-    public void onClickAidl(View view) {
-        startActivity(new Intent(this, AidlActivity.class));
-    }
-
-    // 测试AIDL返回自定义person类型
-    public void onClickAidl2(View view) {
-        startActivity(new Intent(this, Aidl2Activity.class));
-    }
-
-    public void onClickHandler(View view) {
-        startActivity(new Intent(this, HandlerActivity.class));
-    }
-
-    public void onClickHandler2(View view) {
-        startActivity(new Intent(this, HandlerActivity2.class));
-    }
-
-    public void onClickAsyncTask(View view) {
-        startActivity(new Intent(this, AsyncTaskActivity.class));
-    }
-
-    public void onClickHandlerThread(View view) {
-        startActivity(new Intent(this, HandlerThreadActivity.class));
+        intent.putExtra("user", new User3("ling", 22));
+        mList.add(new ActivityBean("测试Parcelable传递数据", intent));
+        mList.add(new ActivityBean("AIDL传输int", new Intent(this, AidlActivity.class)));
+        mList.add(new ActivityBean("AIDL传输自定义数据", new Intent(this, Aidl2Activity.class)));
+        mList.add(new ActivityBean("主线程使用Handler", new Intent(this, HandlerActivity.class)));
+        mList.add(new ActivityBean("子线程使用Handler", new Intent(this, HandlerActivity2.class)));
+        mList.add(new ActivityBean("AsyncTask", new Intent(this, AsyncTaskActivity.class)));
+        mList.add(new ActivityBean("HandlerThread", new Intent(this, HandlerThreadActivity.class)));
+        mList.add(new ActivityBean("IntentService", new Intent(this, IntentServiceActivity.class)));
     }
 }

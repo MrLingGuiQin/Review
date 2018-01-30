@@ -40,7 +40,9 @@
         <activity android:name=".handler.HandlerActivity" />
         <activity android:name=".handler.HandlerActivity2" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
-        <activity android:name=".handlerthread.HandlerThreadActivity"></activity>
+        <activity android:name=".handlerthread.HandlerThreadActivity" />
+        <activity android:name=".intentservice.IntentServiceActivity"/>
+        <service android:name=".intentservice.MyIntentService" />
     </application>
 
 </manifest>
