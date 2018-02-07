@@ -41,8 +41,13 @@
         <activity android:name=".handler.HandlerActivity2" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
         <activity android:name=".handlerthread.HandlerThreadActivity" />
-        <activity android:name=".intentservice.IntentServiceActivity"/>
+        <activity android:name=".intentservice.IntentServiceActivity" />
+
         <service android:name=".intentservice.MyIntentService" />
+
+        <activity android:name=".view.TestViewActivity" />
+        <activity android:name=".view.EventActivity" />
+        <activity android:name=".view.EventActivity2"></activity>
     </application>
 
 </manifest>
