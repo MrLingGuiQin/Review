@@ -47,7 +47,12 @@
 
         <activity android:name=".view.TestViewActivity" />
         <activity android:name=".view.EventActivity" />
-        <activity android:name=".view.EventActivity2"></activity>
+        <activity android:name=".view.EventActivity2" />
+
+        <!-- android:hardwareAccelerated="true"  开启硬件加速-->
+        <activity
+            android:name=".listview.ListViewActivity"
+            android:hardwareAccelerated="true" />
     </application>
 
 </manifest>

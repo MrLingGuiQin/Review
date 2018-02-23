@@ -17,6 +17,7 @@ import com.example.ling.review.ipc.aidl.Aidl2Activity;
 import com.example.ling.review.ipc.aidl.AidlActivity;
 import com.example.ling.review.ipc.parcelable.ParcelableActivity;
 import com.example.ling.review.ipc.parcelable.User3;
+import com.example.ling.review.listview.ListViewActivity;
 import com.example.ling.review.receiver.BroadcastReceiverActivity;
 import com.example.ling.review.service.BindServiceActivity;
 import com.example.ling.review.service.StartServiceActivity;
@@ -63,5 +64,6 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new ActivityBean("TestView", new Intent(this, TestViewActivity.class)));
         mList.add(new ActivityBean("TestEvent", new Intent(this, EventActivity.class)));
         mList.add(new ActivityBean("TestEvent2", new Intent(this, EventActivity2.class)));
+        mList.add(new ActivityBean("ListView", new Intent(this, ListViewActivity.class)));
     }
 }
