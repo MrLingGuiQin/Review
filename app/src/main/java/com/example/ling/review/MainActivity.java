@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.example.ling.bean.ActivityBean;
 import com.example.ling.review.asynctask.AsyncTaskActivity;
+import com.example.ling.review.butterknife.ButterknifeActivity;
 import com.example.ling.review.handler.HandlerActivity;
 import com.example.ling.review.handler.HandlerActivity2;
 import com.example.ling.review.handlerthread.HandlerThreadActivity;
@@ -18,7 +19,11 @@ import com.example.ling.review.ipc.aidl.AidlActivity;
 import com.example.ling.review.ipc.parcelable.ParcelableActivity;
 import com.example.ling.review.ipc.parcelable.User3;
 import com.example.ling.review.listview.ListViewActivity;
+import com.example.ling.review.mvc.contronller.StudentMVCActivity;
+import com.example.ling.review.mvp.view.StudentMVPActivity;
+import com.example.ling.review.okhttp.OkHttpActivity;
 import com.example.ling.review.receiver.BroadcastReceiverActivity;
+import com.example.ling.review.retrofit.RetrofitActivity;
 import com.example.ling.review.service.BindServiceActivity;
 import com.example.ling.review.service.StartServiceActivity;
 import com.example.ling.review.view.EventActivity;
@@ -65,5 +70,10 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new ActivityBean("TestEvent", new Intent(this, EventActivity.class)));
         mList.add(new ActivityBean("TestEvent2", new Intent(this, EventActivity2.class)));
         mList.add(new ActivityBean("ListView", new Intent(this, ListViewActivity.class)));
+        mList.add(new ActivityBean("OkHttp", new Intent(this, OkHttpActivity.class)));
+        mList.add(new ActivityBean("Retrofit", new Intent(this, RetrofitActivity.class)));
+        mList.add(new ActivityBean("Butterknife", new Intent(this, ButterknifeActivity.class)));
+        mList.add(new ActivityBean("MVC", new Intent(this, StudentMVCActivity.class)));
+        mList.add(new ActivityBean("MVP", new Intent(this, StudentMVPActivity.class)));
     }
 }
