@@ -21,6 +21,7 @@ import com.example.ling.review.ipc.parcelable.User3;
 import com.example.ling.review.listview.ListViewActivity;
 import com.example.ling.review.mvc.contronller.StudentMVCActivity;
 import com.example.ling.review.mvp.view.StudentMVPActivity;
+import com.example.ling.review.mvvm.view.StudentMVVMActivity;
 import com.example.ling.review.okhttp.OkHttpActivity;
 import com.example.ling.review.receiver.BroadcastReceiverActivity;
 import com.example.ling.review.retrofit.RetrofitActivity;
@@ -75,5 +76,32 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new ActivityBean("Butterknife", new Intent(this, ButterknifeActivity.class)));
         mList.add(new ActivityBean("MVC", new Intent(this, StudentMVCActivity.class)));
         mList.add(new ActivityBean("MVP", new Intent(this, StudentMVPActivity.class)));
+        mList.add(new ActivityBean("MVVM", new Intent(this, StudentMVVMActivity.class)));
+    }
+
+    /**
+     * 在 onStop 之前调用
+     * activity 异常被销毁杀死时会回调该方法
+     * 我们可以通过 Bundle 进行保存数据
+     * 当Activity被重新创建时 从 Bundle 取出数据进行回显
+     *
+     * @param outState
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+
+    /**
+     * 当Activity重新创建时 会在 onstart 之后调用
+     * 从 Bundle 中取出销毁时保存的数据进行恢复
+     *
+     * @param savedInstanceState
+     */
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }
