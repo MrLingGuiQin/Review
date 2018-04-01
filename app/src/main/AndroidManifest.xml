@@ -3,6 +3,7 @@
     package="com.example.ling.review">
 
     <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -61,7 +62,8 @@
         <activity android:name=".butterknife.ButterknifeActivity" />
         <activity android:name=".mvc.contronller.StudentMVCActivity" />
         <activity android:name=".mvp.view.StudentMVPActivity" />
-        <activity android:name=".mvvm.view.StudentMVVMActivity"></activity>
+        <activity android:name=".mvvm.view.StudentMVVMActivity" />
+        <activity android:name=".view.TestPagerActivity"></activity>
     </application>
 
 </manifest>

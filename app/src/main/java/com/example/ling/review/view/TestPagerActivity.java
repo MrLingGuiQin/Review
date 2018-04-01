@@ -5,12 +5,11 @@ import android.os.Bundle;
 
 import com.example.ling.review.R;
 
-public class TestViewActivity extends AppCompatActivity {
+public class TestPagerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_view);
-        Titlebar titlebar = new Titlebar(this);
+        setContentView(R.layout.activity_test_pager);
     }
 }

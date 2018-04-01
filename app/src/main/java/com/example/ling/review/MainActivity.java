@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ListView;
 
 import com.example.ling.bean.ActivityBean;
 import com.example.ling.review.asynctask.AsyncTaskActivity;
@@ -29,6 +30,7 @@ import com.example.ling.review.service.BindServiceActivity;
 import com.example.ling.review.service.StartServiceActivity;
 import com.example.ling.review.view.EventActivity;
 import com.example.ling.review.view.EventActivity2;
+import com.example.ling.review.view.TestPagerActivity;
 import com.example.ling.review.view.TestViewActivity;
 
 import java.util.ArrayList;
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new ActivityBean("HandlerThread", new Intent(this, HandlerThreadActivity.class)));
         mList.add(new ActivityBean("IntentService", new Intent(this, IntentServiceActivity.class)));
         mList.add(new ActivityBean("TestView", new Intent(this, TestViewActivity.class)));
+        mList.add(new ActivityBean("TestMyViewPager", new Intent(this, TestPagerActivity.class)));
         mList.add(new ActivityBean("TestEvent", new Intent(this, EventActivity.class)));
         mList.add(new ActivityBean("TestEvent2", new Intent(this, EventActivity2.class)));
         mList.add(new ActivityBean("ListView", new Intent(this, ListViewActivity.class)));
