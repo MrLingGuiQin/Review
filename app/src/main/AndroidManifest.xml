@@ -63,7 +63,9 @@
         <activity android:name=".mvc.contronller.StudentMVCActivity" />
         <activity android:name=".mvp.view.StudentMVPActivity" />
         <activity android:name=".mvvm.view.StudentMVVMActivity" />
-        <activity android:name=".view.TestPagerActivity"></activity>
+        <activity android:name=".view.TestPagerActivity" />
+        <activity android:name=".byone.ByoneActivity" />
+        <activity android:name=".chart.ChartActivity"></activity>
     </application>
 
 </manifest>

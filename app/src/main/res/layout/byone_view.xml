@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context="com.example.ling.review.view.TestViewActivity">
+
+    <ImageView
+        android:id="@+id/blue_arrow"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_arrow"
+        app:layout_constraintDimensionRatio="30:42"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blue_arrow">
+
+        <TextView
+            android:id="@+id/txt_lean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FF5F52A0"
+            android:gravity="center"
+            android:text="lean"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_healthy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#22ac38"
+            android:gravity="center"
+            android:text="healthy"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_chubby"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fc0001"
+            android:gravity="center"
+            android:text="chubby"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_overweight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#f29702"
+            android:gravity="center"
+            android:text="overweight"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+
+
+    <!--  <TextView
+          android:id="@+id/txt_lean"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="#FF5F52A0"
+          android:gravity="center"
+          android:text="lean"
+          android:textColor="#ffffffff"
+          android:layout_marginTop="20dp"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toStartOf="@id/txt_healthy"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ll_root" />
+
+      <TextView
+          android:id="@+id/txt_healthy"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="#22ac38"
+          android:gravity="center"
+          android:text="healthy"
+          android:textColor="#ffffffff"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toStartOf="@id/txt_chubby"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toEndOf="@+id/txt_lean"
+          app:layout_constraintTop_toTopOf="@+id/txt_lean" />
+
+      <TextView
+          android:id="@+id/txt_chubby"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="#fc0001"
+          android:gravity="center"
+          android:text="chubby"
+          android:textColor="#ffffffff"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toStartOf="@id/txt_overweight"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toEndOf="@+id/txt_healthy"
+          app:layout_constraintTop_toTopOf="@id/txt_lean" />
+
+      <TextView
+          android:id="@+id/txt_overweight"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="#f29702"
+          android:gravity="center"
+          android:text="overweight"
+          android:textColor="#ffffffff"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toEndOf="@+id/txt_chubby"
+          app:layout_constraintTop_toTopOf="@id/txt_lean" />
+  -->
+
+</android.support.constraint.ConstraintLayout>

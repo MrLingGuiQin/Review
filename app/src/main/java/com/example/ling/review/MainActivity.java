@@ -11,6 +11,8 @@ import android.widget.ListView;
 import com.example.ling.bean.ActivityBean;
 import com.example.ling.review.asynctask.AsyncTaskActivity;
 import com.example.ling.review.butterknife.ButterknifeActivity;
+import com.example.ling.review.byone.ByoneActivity;
+import com.example.ling.review.chart.ChartActivity;
 import com.example.ling.review.handler.HandlerActivity;
 import com.example.ling.review.handler.HandlerActivity2;
 import com.example.ling.review.handlerthread.HandlerThreadActivity;
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new ActivityBean("MVC", new Intent(this, StudentMVCActivity.class)));
         mList.add(new ActivityBean("MVP", new Intent(this, StudentMVPActivity.class)));
         mList.add(new ActivityBean("MVVM", new Intent(this, StudentMVVMActivity.class)));
+        mList.add(new ActivityBean("定义刻度条", new Intent(this, ByoneActivity.class)));
+        mList.add(new ActivityBean("图表折线图", new Intent(this, ChartActivity.class)));
     }
 
     /**

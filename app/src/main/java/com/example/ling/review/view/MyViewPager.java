@@ -20,7 +20,6 @@ import com.example.ling.review.R;
  * ***************************************
  */
 public class MyViewPager extends ViewGroup {
-    SparseArray
 
     private int[] images = new int[]{R.mipmap.launcher_01, R.mipmap.launcher_02, R.mipmap.launcher_03,
             R.mipmap.launcher_04, R.mipmap.launcher_05};
